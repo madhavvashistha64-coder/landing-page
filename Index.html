@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #020617;
+}
+
+nav h2 {
+  color: #38bdf8;
+}
+
+nav .links {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .links a {
+    margin: 10px 0;
+  }
+
+  .menu {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <h2>MadhavDev</h2>
+  <div class="menu" onclick="toggleMenu()">☰ Menu</div>
+  <div class="links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Build Your Website Easily</h1>
+  <p>Create modern and responsive websites using HTML, CSS & JavaScript</p>
+  <button class="btn" onclick="showMessage()">Get Started</button>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Fast</h3>
+    <p>Optimized performance and speed</p>
+  </div>
+  <div class="card">
+    <h3>Responsive</h3>
+    <p>Works on all devices</p>
+  </div>
+  <div class="card">
+    <h3>Modern</h3>
+    <p>Clean and attractive design</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Madhav Vashistha</p>
+</footer>
+
+<script>
+// Button click message
+function showMessage() {
+  alert("Thanks for visiting! 🚀");
+}
+
+// Mobile menu toggle
+function toggleMenu() {
+  const links = document.getElementById("navLinks");
+  if (links.style.display === "flex") {
+    links.style.display = "none";
+  } else {
+    links.style.display = "flex";
+  }
+}
+</script>
+
+</body>
+</html>
